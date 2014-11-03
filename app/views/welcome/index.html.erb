@@ -1,0 +1,18 @@
+<%= search_form_for @q , url: root_path, html: { method: :get } do |f| %>
+  <%= f.label :profile %>
+  <%= f.search_field :profile_cont %>
+  <%= f.submit%>
+<% end %>
+
+<% @persons.each do |no| %>
+  <h4> <%= no.profile %></h4>
+  <h4><%= no.user.email%></h4><br />
+<% end %>
+
+
+
+
+
+
+
+

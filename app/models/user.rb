@@ -10,4 +10,7 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :work,  :allow_destroy => true
 
   validates :contact_no , :length => { :minimum => 10, :maximum => 10 }
+
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  validates_attachment_content_type :avatar, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 end

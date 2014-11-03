@@ -40,3 +40,5 @@ gem 'spring',        group: :development
 gem 'devise'
 gem "twitter-bootstrap-rails"
 gem "pry"
+gem "paperclip", "~> 4.2"
+gem 'ransack'

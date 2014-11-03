@@ -71,10 +71,17 @@ Enter your Address Here:
   <%= f.fields_for :work,resource.work.build do |fff| %>
     <%= fff.label :profile %><br />
     <%= fff.text_field :profile %><br /><br />
+You are not Working at:
+    <%= fff.select :holiday_day, options_for_select([["Sunday" , "sunday"], ["Monday" , "monday" ] , ["Tueday" , "tueday" ] , ["Wednesday" , "wednesday" ] , ["Friday" , "friday" ] , ["saturday" , "saturday" ]]) %>
+    <%= fff.select :holiday_time, options_for_select([["Morning", "morning"], ["Evening", "evening"]]) %>
+
   <% end %>
 
+  <%= f.label :image%>:
+  <%= f.file_field :avatar%>
 
-
+  <br /><br /><br />
+  
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
